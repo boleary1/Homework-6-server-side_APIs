@@ -1,0 +1,14 @@
+.currentTemp{
+    border:1px solid #cecece;
+}
+.cities{
+    border:1px solid #cecece;
+
+}
+.fiveDay{
+    border:1px solid #cecece;
+}
+.fiveDayItem{
+    background-color: blue;
+    margin: 3px;
+}
