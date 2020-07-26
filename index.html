@@ -17,25 +17,42 @@
             <h1 class="display-4 text-center">Weather Dashboard</h1>
         </div>
     </div>
+    <div class="city"></div>
+    <div class="wind"></div>
+    <div class="humidity"></div>
+    <div class="temp"></div>
+
+    <!-- Add extra div for the bonus Fahrenheit temp -->
+    <div class="tempF"></div>
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-5 col-lg-4 container cities">
                 <h5>Search for a city:</h5>
                 <form id="locationForm" method="POST" class="d-flex justify-content-center">
-                    <input type="text" placeholder="Enter your zip code?" name="search-text" id="searchText" /> 
-                    <button id="search-btn" class="search-btn btn " onclick="/////////////////////////////" disabled>search</button>
+                    <input type="text" placeholder="Enter your zip code?" name="search-text" id="searchText" />
+                    <button id="search-btn" class="search-btn btn " onclick="/////////////////////////////"
+                        disabled>search</button>
                 </form>
             </div>
             <div class="col">
-                <h5>Current weather:</h5>
+
 
                 <div class="row container currentTemp">
-                    current temp
+                    <div class="column">
+                    <div class="row"><h4 class="cityCurrent"></h4><img class="cityCurrentSource" src=""
+                        alt="Weather Image"></div>
+
+                    <h6 class="currentTempDisplay"></h6>
+                    <h6 class="currentHumidityDisplay"></h6>
+                    <h6 class="currentwindspeedDisplay"></h6>
+                    <h6 class="currentUVIndexDisplay"></h6>
+
+                </div>
                 </div>
                 <h5>Five day forcast:</h5>
 
                 <div class="row container fiveDay ">
-                    
+
                     <div class="col-sm-12 col-md d-flex justify-content-center fiveDayItem">
                         1 of 3
                     </div>
@@ -56,6 +73,9 @@
             </div>
 
         </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="script.js"> </script>
 </body>
 
 </html>
