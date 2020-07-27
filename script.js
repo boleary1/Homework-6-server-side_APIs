@@ -6,8 +6,8 @@ var APIKey = "3fa2a0131565ebb35436afe8cff1d40b";
 
 //   var queryURL = "api.openweathermap.org/data/2.5/forecast?q=boston&appid=" + APIKey;
 //   var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,minutely&appid=" + APIKey;
-var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=boston&units=imperial&appid=" + APIKey;
-
+var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=boston&units=imperial&appid=" + APIKey; //working api link
+var secondQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=42.3601&lon=-71.0589&appid=" + APIKey;
 
 
 
@@ -30,7 +30,7 @@ $.ajax({
         // console.log(dateTogether)
         console.log(moment().format('MMMM Do YYYY'));
         console.log(response.list[0].weather[0].icon);
-        var weatherImg = ("http://openweathermap.org/img/wn/"+response.list[0].weather[0].icon+"@2x.png")
+        var weatherImg = ("http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png")
         console.log(weatherImg)
 
 
@@ -40,13 +40,13 @@ $.ajax({
         $(".currentTempDisplay").html("Temperture: " + response.list[0].main.temp + "°")
         $(".currentHumidityDisplay").html("Humidity: " + response.list[0].main.humidity + "%")
         $(".currentwindspeedDisplay").html("Wind speed: " + response.list[0].wind.speed + "mph")
-        $(".currentUVIndexDisplay").html("UV Index: " + response.list[0].wind.speed + "mph")
+        
 
 
 
         $(".wind").text("Wind Speed: " + response.wind.speed);
         $(".humidity").text("Humidity: " + response.main.humidity);
-         
+
         // Convert the temp to fahrenheit
         var tempF = (response.main.temp - 273.15) * 1.80 + 32;
 
@@ -58,4 +58,14 @@ $.ajax({
         console.log("Wind Speed: " + response.wind.speed);
         console.log("Humidity: " + response.main.humidity);
         console.log("Temperature (F): " + tempF);
-      });
+    });
+
+
+$.ajax({
+    url: secondQueryURL,
+    method: "GET"
+})
+    .then(function (responsetwo) {
+        console.log(responsetwo)
+        $(".currentUVIndexDisplay").html("UV Index: " + responsetwo.current.uvi)
+    });
