@@ -8,6 +8,10 @@ var APIKey = "3fa2a0131565ebb35436afe8cff1d40b";
 //   var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,minutely&appid=" + APIKey;
 var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=boston&units=imperial&appid=" + APIKey; //working api link
 var secondQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=42.3601&lon=-71.0589&appid=" + APIKey;
+let latitude;
+let longitude ;
+console.log('lat'+ latitude)
+
 
 
 
@@ -23,6 +27,7 @@ $.ajax({
         // console.log(queryURL);
 
         // Log the resulting object
+        console.log(response.city.coord.lat)
         console.log(response);
         console.log(response.city.name);
         // console.log((response.list[0].dt_txt.split(' ')[0]).split('-'))
@@ -30,6 +35,7 @@ $.ajax({
         // console.log(dateTogether)
         console.log(moment().format('MMMM Do YYYY'));
         console.log(response.list[0].weather[0].icon);
+        latitude = response.city.coord.lat;
         var weatherImg = ("http://openweathermap.org/img/wn/" + response.list[0].weather[0].icon + "@2x.png")
         console.log(weatherImg)
 
