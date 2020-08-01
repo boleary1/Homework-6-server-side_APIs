@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css" />
+
     <title>Homework-6</title>
 </head>
 
@@ -26,28 +29,30 @@
     <div class="tempF"></div>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 col-md-5 col-lg-4 container cities">
+            <div class="col-sm-12 col-md-12 col-lg-3 container cities card">
                 <h5>Search for a city:</h5>
                 <form id="locationForm" method="POST" class="d-flex justify-content-center">
-                    <input type="text" placeholder="Enter your zip code?" name="search-text" id="searchText" />
-                    <button id="search-btn" class="search-btn btn " onclick="/////////////////////////////"
-                        disabled>search</button>
+                    <input type="text" placeholder="zip code?" name="search-text" id="searchText" />
+                    <button id="search-btn" class=" fa fa-search search-btn btn " aria-hidden="true"
+                     ></button>
                 </form>
             </div>
             <div class="col">
 
 
-                <div class="row container currentTemp">
-                    <div class="column">
-                    <div class="row"><h4 class="cityCurrent"></h4><img class="cityCurrentSource" src=""
-                        alt="Weather Image"></div>
+                <div class="row container currentTemp card">
+                    <!-- <div class="col-sm-12 col-md-5 col-lg-5 "> -->
+                        <h4 class="cityCurrent"></h4>
+                        <img class="cityCurrentSource" src="" alt="Weather Image">
 
-                    <h6 class="currentTempDisplay"></h6>
-                    <h6 class="currentHumidityDisplay"></h6>
-                    <h6 class="currentwindspeedDisplay"></h6>
-                    <h6 class="currentUVIndexDisplay"></h6>
+                        <h6 class="currentTempDisplay"></h6>
+                        <h6 class="currentHumidityDisplay"></h6>
+                        <h6 class="currentwindspeedDisplay"></h6>
+                        <h6 class="currentUVIndexDisplay"></h6>
+                        <h6 class="uvIndex">UV Index: </h6>
 
-                </div>
+
+                    <!-- </div> -->
                 </div>
                 <h5>Five day forcast:</h5>
 
