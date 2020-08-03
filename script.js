@@ -17,7 +17,9 @@ let zipCode = "02108";
 const dayContainer = $('div.fiveDay');
 const uvIndexContainer = $('h6.uvIndex');
 const zipCodeSearch = document.getElementById('searchText');
-let townName = ""
+let townName = "";
+const displayList = JSON.parse(localStorage.getItem("displayList")) || [];
+
 
 
 const searchBtn = document.getElementById("search-btn");
@@ -123,9 +125,13 @@ searchBtn.addEventListener("click", function (event) {
 );
 
 function saveRecentSearch(){
-    const RecentSearch = {
+    const recentSearch = {
         town: townName,
         zip: zipCode
         }
-    console.log(RecentSearch)
+    console.log(recentSearch);
+    displayList.unshift(recentSearch);
+    displayList.splice(5);
+    localStorage.setItem("displayList", JSON.stringify(displayList));
+
 };
