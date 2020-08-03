@@ -135,3 +135,13 @@ function saveRecentSearch(){
     localStorage.setItem("displayList", JSON.stringify(displayList));
 
 };
+
+// function printRecentSearch() {
+//     highScoresList.innerHTML = ""
+//     highScores.map(score => {
+//         // console.log('<li>${score.name}-${score.score}</li>');
+//         var li = document.createElement('li')
+//         li.innerHTML = score.name + " - " + score.score
+//         highScoresList.appendChild(li)
+//     });
+// };
