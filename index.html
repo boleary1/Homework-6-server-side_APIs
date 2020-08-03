@@ -33,10 +33,13 @@
                 <h5>Search for a city:</h5>
                 <form id="locationForm" method="POST" class="d-flex justify-content-center">
                     <input type="text" placeholder="zip code?" name="search-text" id="searchText" />
-                    <button id="search-btn" class=" fa fa-search search-btn btn " aria-hidden="true"
+                    <button id="search-btn" class=" fa fa-search search-btn btn " aria-hidden="true" disabled
                      ></button>
                 </form>
+                <ol id= "recentSearches"> </ol>
+
             </div>
+
             <div class="col">
 
 
@@ -44,12 +47,11 @@
                     <!-- <div class="col-sm-12 col-md-5 col-lg-5 "> -->
                         <h4 class="cityCurrent"></h4>
                         <img class="cityCurrentSource" src="" alt="Weather Image">
-
                         <h6 class="currentTempDisplay"></h6>
                         <h6 class="currentHumidityDisplay"></h6>
                         <h6 class="currentwindspeedDisplay"></h6>
                         <h6 class="currentUVIndexDisplay"></h6>
-                        <h6 class="uvIndex">UV Index: </h6>
+                        <h6 class="uvIndex"></h6>
 
 
                     <!-- </div> -->
