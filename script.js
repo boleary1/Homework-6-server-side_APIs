@@ -19,6 +19,8 @@ const uvIndexContainer = $('h6.uvIndex');
 const zipCodeSearch = document.getElementById('searchText');
 let townName = "";
 const displayList = JSON.parse(localStorage.getItem("displayList")) || [];
+const recentSearches = document.getElementById('recentSearches');
+
 
 
 
@@ -67,7 +69,7 @@ function secondAjaxCall(obj) {
                 highlightColor = '#ffffff'
             };
 
-            $(".uvIndex").html("UV Index: "+ "<span style= background-color:" + highlightColor + '>' + responsetwo.current.uvi + "</span>");
+            $(".uvIndex").html("UV Index: " + "<span style= background-color:" + highlightColor + '>' + responsetwo.current.uvi + "</span>");
 
 
             //////////////////////5 day forcast below////////////////////////////////
@@ -124,24 +126,24 @@ searchBtn.addEventListener("click", function (event) {
 }
 );
 
-function saveRecentSearch(){
+function saveRecentSearch() {
     const recentSearch = {
         town: townName,
         zip: zipCode
-        }
+    }
     console.log(recentSearch);
     displayList.unshift(recentSearch);
     displayList.splice(5);
     localStorage.setItem("displayList", JSON.stringify(displayList));
-
+    printRecentSearch();
 };
 
-// function printRecentSearch() {
-//     highScoresList.innerHTML = ""
-//     highScores.map(score => {
-//         // console.log('<li>${score.name}-${score.score}</li>');
-//         var li = document.createElement('li')
-//         li.innerHTML = score.name + " - " + score.score
-//         highScoresList.appendChild(li)
-//     });
-// };
+function printRecentSearch() {
+    console.log(displayList)
+    recentSearches.innerHTML = ""
+    displayList.map(displayList => {
+        var li = document.createElement('li')
+        li.innerHTML = displayList.town + " - " + displayList.zip
+        recentSearches.appendChild(li)
+    });
+};
