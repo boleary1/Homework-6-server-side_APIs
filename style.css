@@ -12,9 +12,11 @@
 }
 .fiveDay{
     border:1px solid #cecece;
+
+
 }
 .fiveDayItem{
-    margin: 3px;
+    margin: 3px auto;
 }
 .bold{
     font-weight: bold;
@@ -22,4 +24,11 @@
 
 #recentSearches li{
     list-style-type: none;
+  }
+
+  @media only screen and (max-width: 992px){
+      .currentTemp, .fiveDay, .cities{
+          margin: 1rem auto;
+      }
+
   }

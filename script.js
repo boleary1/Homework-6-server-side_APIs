@@ -1,29 +1,12 @@
 var APIKey = "3fa2a0131565ebb35436afe8cff1d40b";
-let zipCode = "02108";
-
-// Here we are building the URL we need to query the database
-// var queryURL = "https://api.openweathermap.org/data/2.5/weather?" +
-//   "q=Boston&appid=" + APIKey;
-// let latitude = 42.3584;
-// let longitude = -71.0598;
-//   var queryURL = "api.openweathermap.org/data/2.5/forecast?q=boston&appid=" + APIKey;
-//   var queryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=33.441792&lon=-94.037689&exclude=hourly,minutely&appid=" + APIKey;
-// var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=scituate&units=imperial&appid=" + APIKey; //working api link
-// var queryURL = "https://api.openweathermap.org/data/2.5/weather?zip=94040,us&appid=" + APIKey
-// var secondQueryURL = ("https://api.openweathermap.org/data/2.5/onecall?lat=" + latitude + "&lon=" + longitude + "&appid=" + APIKey)
-// var secondQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=42.3584&lon=-71.0598&appid=" + APIKey;
-// var secondQueryURL = "https://api.openweathermap.org/data/2.5/onecall?lat=42.3601&lon=-71.0589&appid=" + APIKey;
-
+// let zipCode = "02108";
 const dayContainer = $('div.fiveDay');
 const uvIndexContainer = $('h6.uvIndex');
 const zipCodeSearch = document.getElementById('searchText');
 let townName = "";
-const displayList = JSON.parse(localStorage.getItem("displayList")) || [];
+const displayList = JSON.parse(localStorage.getItem("displayList")) || [{town: "Boston", zip: "02108"}];
+let zipCode = displayList[0].zip;
 const recentSearches = document.getElementById('recentSearches');
-
-
-
-
 const searchBtn = document.getElementById("search-btn");
 
 zipCodeSearch.addEventListener("keyup", () => { //if there is text in the username box, save score button is enabled
