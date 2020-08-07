@@ -1,4 +1,4 @@
-.currentTemp{
+.currentTemp, .cities{
     border:1px solid #cecece;
 }
 .cityCurrentSource{
@@ -6,28 +6,21 @@
     height: auto;
     display: block;
 }
-.cities{
-    border:1px solid #cecece;
 
-}
-.fiveDay{
-    border:1px solid #cecece;
-
-
-}
 .fiveDayItem{
-    margin: 3px auto;
+    margin: 1rem auto;
 }
+
 .bold{
     font-weight: bold;
 }
 
 #recentSearches li{
     list-style-type: none;
-  }
+}
 
-  @media only screen and (max-width: 992px){
-      .currentTemp, .fiveDay, .cities{
+@media only screen and (max-width: 992px){
+      .currentTemp, .fiveDayOutside, .cities{
           margin: 1rem auto;
       }
 
