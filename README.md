@@ -1,3 +1,22 @@
+## Live website URL:
+[live website](https://boleary1.github.io/Homework-6-server-side_APIs/)
+</br>
+[GitHub Repository](https://github.com/boleary1/Homework-6-server-side_APIs)
+
+
+
+## **Description:**
+Website built in early August 2020.  The weather app works.  The five most recent searches are saved in local storage.  On load the most recent search is displayed.  If there isn't any recent searches, Boston is shown.  
+
+Last edit was 8/7/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with any questions.
+
+## **Screenshot:**
+
+![Screenshot of working app](screenshot.JPG)
+
+
+
+## **Original assignment description below:**
 # 06 Server-Side APIs: Weather Dashboard
 
 Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
