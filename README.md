@@ -8,7 +8,7 @@
 ## **Description:**
 Website built in early August 2020.  The weather app works.  The five most recent searches are saved in local storage.  On load the most recent search is displayed.  If there isn't any recent searches, Boston is shown.  
 
-Last edit was 8/7/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with any questions.
+Last edit was 8/8/2020 by Brian O'leary.  Contact oleary.brian1@gmail.com with any questions.
 
 ## **Screenshot:**
 
