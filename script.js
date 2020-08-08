@@ -1,5 +1,4 @@
 var APIKey = "3fa2a0131565ebb35436afe8cff1d40b";
-// let zipCode = "02108";
 const dayContainer = $('div.fiveDay');
 const uvIndexContainer = $('h6.uvIndex');
 const zipCodeSearch = document.getElementById('searchText');
@@ -109,20 +108,18 @@ searchBtn.addEventListener("click", function (event) {
 }
 );
 
-function saveRecentSearch() {
+function saveRecentSearch() { //add recent search to the list
     const recentSearch = {
         town: townName,
         zip: zipCode
     }
-    console.log(recentSearch);
     displayList.unshift(recentSearch);
     displayList.splice(5);
     localStorage.setItem("displayList", JSON.stringify(displayList));
     printRecentSearch();
 };
 
-function printRecentSearch() {
-    console.log(displayList)
+function printRecentSearch() { //display the updated list
     recentSearches.innerHTML = ""
     displayList.map(displayList => {
         var li = document.createElement('li')
